@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]private LayerMask mask;
     private PLayerUi PLayerUi;
     private InputManager inputManager;
+    //public ChangeColor changeColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +31,13 @@ public class PlayerInteract : MonoBehaviour
             if(hit.collider.GetComponent<Interactable>() != null) 
             {
                 Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
+                ChangeColor changeColor = hit.collider.gameObject.GetComponent<ChangeColor>();
                 PLayerUi.UpdateText(interactable.PromptMessage);
                 if (inputManager.onFoot.Interact.triggered)
                 {
-                       interactable.BaseInteract();
+                    interactable.BaseInteract();
+                    changeColor.ColorInteract();
+
                 }
             }
         }
