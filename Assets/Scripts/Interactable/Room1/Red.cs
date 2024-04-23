@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class Voilet: MonoBehaviour
+public class Red : MonoBehaviour
 {
-    public Color targetColor = new Color(0.58f, 0f, 0.83f, 1f); // Set your desired color in the Inspector
+    public Color targetColor = new Color(1.0f, 0.0f, 0.0f, 1.0f); 
     private Renderer render;
     public  static bool check = false;
 
     void Start()
     {
         render = GetComponent<Renderer>();
-        
+
     }
 
     void Update()
@@ -18,8 +18,8 @@ public class Voilet: MonoBehaviour
         if (IsColorMatching(render.material.color, targetColor))
         {
             check = true;
-            Debug.Log("Voilet colour matched");
-           
+            Debug.Log("Red colour matched");
+
         }
     }
     bool IsColorMatching(Color current, Color target, float tolerance = 0.05f)

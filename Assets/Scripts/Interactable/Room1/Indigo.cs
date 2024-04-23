@@ -1,27 +1,29 @@
 using UnityEngine;
 
-public class Voilet: MonoBehaviour
+public class Indigo : MonoBehaviour
 {
-    public Color targetColor = new Color(0.58f, 0f, 0.83f, 1f); // Set your desired color in the Inspector
+    public Color targetColor = new Color(0.294f, 0f, 0.51f, 1f); // Indigo
     private Renderer render;
-    public  static bool check = false;
+    public static bool check = false;
+  
 
     void Start()
     {
-        render = GetComponent<Renderer>();
+        render= GetComponent<Renderer>();
         
     }
 
     void Update()
     {
-        // Check if the color of the material matches the target color
+        // Compare the current color to the target color with a small tolerance to account for minor differences
         if (IsColorMatching(render.material.color, targetColor))
         {
             check = true;
-            Debug.Log("Voilet colour matched");
-           
+            Debug.Log("Indigo colour matched");
         }
     }
+
+    // Method to compare two colors with a tolerance
     bool IsColorMatching(Color current, Color target, float tolerance = 0.05f)
     {
         return Mathf.Abs(current.r - target.r) < tolerance &&

@@ -33,4 +33,5 @@ public class ChangeColor : MonoBehaviour
             colorIndex = (colorIndex + 1) % colors.Length; // Increment color index and loop back to 0 if it exceeds array length
         }
     }
+
 }
