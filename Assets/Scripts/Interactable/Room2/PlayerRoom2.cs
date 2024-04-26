@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteract : MonoBehaviour
+public class PlayerRoom2: MonoBehaviour
 {
     private Camera cam;
-    [SerializeField]private float distance = 3f;
-    [SerializeField]private LayerMask mask;
+    [SerializeField] private float distance = 3f;
+    [SerializeField] private LayerMask mask;
     private PLayerUi PLayerUi;
     private InputManager inputManager;
     //public ChangeColor changeColor;
@@ -14,7 +14,7 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         cam = GetComponent<PlayerLook>().cam;
-        PLayerUi= GetComponent<PLayerUi>();
+        PLayerUi = GetComponent<PLayerUi>();
         inputManager = GetComponent<InputManager>();
     }
 
@@ -24,11 +24,11 @@ public class PlayerInteract : MonoBehaviour
         PLayerUi.UpdateText(string.Empty);
         //ray creating for interaction 
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction*distance);
+        Debug.DrawRay(ray.origin, ray.direction * distance);
         RaycastHit hit; //to dtetct the collision
-        if(Physics.Raycast(ray, out hit, distance, mask))
+        if (Physics.Raycast(ray, out hit, distance, mask))
         {
-            if(hit.collider.GetComponent<Interactable>() != null) 
+            if (hit.collider.GetComponent<Interactable>() != null)
             {
                 Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
                 ChangeColor changeColor = hit.collider.gameObject.GetComponent<ChangeColor>();
@@ -37,8 +37,8 @@ public class PlayerInteract : MonoBehaviour
                 if (inputManager.onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();
-                    changeColor.ColorInteract();
-                    //paskey.HandleKeypadInput();
+                    //changeColor.ColorInteract();
+                    paskey.HandleKeypadInput();
 
                 }
             }

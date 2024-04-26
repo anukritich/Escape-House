@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9bfb94fd1928af942a2d1e820e98cf03
+guid: a70b17f76f2f4c34fbda1805938c6048
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 4763479d7193f8540b85d726095c700f, type: 2}
+      name: diamond
+    second: {fileID: 2100000, guid: 9a9af31ff2cbd5c48be1048bf5496d54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hearth
+    second: {fileID: 2100000, guid: c202b83393d85f3479e4df7acdd94f1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: innercoin
+    second: {fileID: 2100000, guid: 87da4505efc2e0048bae1d254d57b534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightning
+    second: {fileID: 2100000, guid: 07729e125a3ca4e458bbd4623e3f7124, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outercoin
+    second: {fileID: 2100000, guid: fa64f33a5ba98ea468c2f8b2d7d0f740, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

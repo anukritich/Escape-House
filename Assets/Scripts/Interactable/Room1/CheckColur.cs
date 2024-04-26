@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class ColorCheckManager : MonoBehaviour
 {
-    //public Yellow yellowScript;
-    //public Voilet voiletScript;
-    //public Indigo indigoScript;
-    //public Blue blueScript;
-    //public Green greenScript;
-    //public Orange orangeScript;
-    //public Red redScript;
-
+    
+  
     void Update()
     {
        
@@ -18,6 +12,7 @@ public class ColorCheckManager : MonoBehaviour
             && Orange.check == true && Red.check == true )
         {
             Debug.Log("All colours match");
+
         }
     }
 }

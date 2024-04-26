@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9bfb94fd1928af942a2d1e820e98cf03
+guid: 57d2464812e2eeb488e4ee575cb76326
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 4763479d7193f8540b85d726095c700f, type: 2}
+      name: Door__Door_C_jpg
+    second: {fileID: 2100000, guid: 047a3655696055243875c11b9dc9d1ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glossy__Door_C_jpg
+    second: {fileID: 2100000, guid: 44e602496bb1efa4c8da0035d1ea5443, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glossy__Reflexion_jpg
+    second: {fileID: 2100000, guid: d1ed76663139a3a4aaf2dbe529536d15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: d40c115a61ff4974cb34fc6c7532bfae, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -28,7 +43,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
