@@ -46,7 +46,7 @@ public class KeyPad : MonoBehaviour
     private void UnlockDoor()
     {
         passcheck = true;
-        animator.SetTrigger("doorOpen");
+        animator.SetTrigger("open");
         CodePanel.SetActive(false);
         Debug.Log("Animation playing");
         messageText.text = "The door is unlocked";
@@ -61,6 +61,6 @@ public class KeyPad : MonoBehaviour
     private IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Room3");
+        SceneManager.LoadScene("Start");
     }
 }

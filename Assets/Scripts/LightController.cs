@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LampGlow : MonoBehaviour
 {
@@ -12,5 +13,9 @@ public class LampGlow : MonoBehaviour
         // Calculate the intensity based on time
         float intensity = Mathf.Lerp(maxIntensity, minIntensity, Time.time * glowSpeed);
         lampLight.intensity = intensity;
+        if (intensity == 0)
+        {
+            //SceneManager.LoadScene("Restart");
+        }
     }
 }

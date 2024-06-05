@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
    
     public void Play()
     {
-        SceneManager.LoadScene("Room 1"); ;
+        SceneManager.LoadScene("Room 1"); 
     }
    
     
@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("Room 1");
     }
 
 }
